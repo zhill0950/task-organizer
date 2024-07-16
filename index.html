@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <title>Task Organizer</title>
+  </head>
+
+  <body>
+    <nav class="navbar has-shadow has-background-info-dark">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <h1 class="title is-size-2 px-4 is-italic has-text-light">
+            Task Organizer
+          </h1>
+        </a>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4">
+            <h2 class="is-size-4 title-light">Create a Task</h2>
+            <input
+              type="text"
+              class="input my-1 is-info"
+              id="form-title"
+              placeholder="Title"
+            />
+            <textarea
+              class="textarea has-fixed-size my-1 is-info"
+              id="form-description"
+              placeholder="Description"
+            ></textarea>
+            <input type="date" class="input my-1 is-info" id="form-duedate" />
+            <select
+              name="priority"
+              id="form-priority"
+              class="input my-1 is-info"
+            >
+              <option value="">Choose Priority Level</option>
+              <option value="HIGH">High</option>
+              <option value="MEDIUM">Medium</option>
+              <option value="LOW">Low</option>
+            </select>
+            <div class="has-text-centered my-5">
+              <button class="button is-info" type="submit" id="submitBtn">
+                Submit
+              </button>
+              <button class="button is-danger" type="button" id="clearBtn">
+                Clear All
+              </button>
+            </div>
+
+            <div class="has-text-centered my-1"></div>
+          </div>
+          <div class="column is-8">
+            <div class="tabs is-boxed is-centered">
+              <ul>
+                <li class="is-active" data-target="high-content">
+                  <a class="has-text-danger">High</a>
+                </li>
+                <li data-target="medium-content">
+                  <a class="has-text-warning">Medium</a>
+                </li>
+                <li data-target="low-content">
+                  <a class="has-text-success">Low</a>
+                </li>
+              </ul>
+            </div>
+            <div class="container">
+              <div class="columns" id="task-container">
+                <div class="column is-12" id="high-content"></div>
+                <div class="column is-12 is-hidden" id="medium-content"></div>
+                <div class="column is-12 is-hidden" id="low-content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer has-background-white p-4">
+      <div class="content has-text-centered">
+        <p>Created by Zachary Hill 2024</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
