@@ -32,6 +32,8 @@ const clear = document.getElementById("clearBtn");
 const highContainer = document.getElementById("high-content");
 const medContainer = document.getElementById("medium-content");
 const lowContainer = document.getElementById("low-content");
+const dateContainer = document.getElementById("date-content");
+const playContainer = document.getElementById("play-content");
 
 let taskCards = [];
 
@@ -72,6 +74,8 @@ function renderTaskCards() {
   highContainer.innerHTML = "";
   medContainer.innerHTML = "";
   lowContainer.innerHTML = "";
+  dateContainer.innerHTML = "";
+  playContainer.innerHTML = "";
 
   for (let i = 0; i < taskCards.length; i++) {
     const taskCard = taskCards[i];
@@ -129,6 +133,10 @@ function renderTaskCards() {
       medContainer.appendChild(card);
     } else if (taskCard.Priority === "LOW") {
       lowContainer.appendChild(card);
+    } else if (taskCard.Priority === "DATE") {
+      dateContainer.appendChild(card);
+    } else if (taskCard.Priority === "PLAY") {
+      playContainer.appendChild(card);
     }
   }
 
