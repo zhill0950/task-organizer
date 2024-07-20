@@ -47,6 +47,8 @@
               <option value="HIGH">High</option>
               <option value="MEDIUM">Medium</option>
               <option value="LOW">Low</option>
+              <option value="DATE">Date Ideas</option>
+              <option value="PLAY">Play Time</option>
             </select>
             <div class="has-text-centered my-5">
               <button class="button is-info" type="submit" id="submitBtn">
@@ -71,6 +73,12 @@
                 <li data-target="low-content">
                   <a class="has-text-success">Low</a>
                 </li>
+                <li data-target="date-content">
+                  <a>Date Ideas</a>
+                </li>
+                <li data-target="play-content">
+                  <a>Play Time</a>
+                </li>
               </ul>
             </div>
             <div class="container">
@@ -78,6 +86,8 @@
                 <div class="column is-12" id="high-content"></div>
                 <div class="column is-12 is-hidden" id="medium-content"></div>
                 <div class="column is-12 is-hidden" id="low-content"></div>
+                <div class="column is-12 is-hidden" id="date-content"></div>
+                <div class="column is-12 is-hidden" id="play-content"></div>
               </div>
             </div>
           </div>
